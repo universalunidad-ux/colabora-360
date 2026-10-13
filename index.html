@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es-MX" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guía práctica para conocer, demostrar e implementar CONTPAQi Colabora.">
+  <title>ExpIRITi · Colabora 360</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#stage">Saltar al contenido</a>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" id="brandHome" aria-label="Ir a la primera sección">
+        <img src="assets/expiriti-logo.webp" alt="Nueva ExpIRITi">
+        <span><b>Colabora 360</b><small>Guía para ventas, implementación y soporte</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="guide-note"><b>Guía</b><span>Consulta las fuentes oficiales</span></span>
+        <button class="icon-button" id="themeToggle" aria-label="Cambiar a tema oscuro" title="Cambiar tema"><span aria-hidden="true">◐</span></button>
+        <div class="topic-wrap">
+          <button class="topic-button" id="topicButton" aria-haspopup="true" aria-expanded="false"><span>Temas</span><b id="progressText">01 / 12</b></button>
+          <div class="topic-menu" id="topicMenu" role="menu" aria-label="Seleccionar tema"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="stage" tabindex="-1">
+      <article class="slide" id="slide" aria-live="polite"></article>
+    </main>
+
+    <footer class="controls" aria-label="Navegación de temas">
+      <button class="nav-button" id="prevButton" aria-label="Tema anterior"><span aria-hidden="true">←</span><span>Anterior</span></button>
+      <div class="progress"><span id="sectionName">Conocer</span><div class="progress-track"><i id="progressBar"></i></div><span id="counter">1 de 12</span></div>
+      <button class="nav-button primary" id="nextButton" aria-label="Tema siguiente"><span>Siguiente</span><span aria-hidden="true">→</span></button>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <div class="dialog-progress" aria-hidden="true"><i id="dialogProgressBar"></i></div>
+      <header class="modal-head">
+        <div><p id="modalEyebrow"></p><h2 id="modalTitle"></h2></div>
+        <button class="icon-button" id="closeButton" aria-label="Cerrar procedimiento" title="Cerrar">×</button>
+      </header>
+      <div class="modal-scroll" id="modalContent" tabindex="0"></div>
+      <footer class="modal-footer">
+        <span id="dialogPosition"></span>
+        <nav aria-label="Navegación entre procedimientos">
+          <button class="nav-button" id="dialogPrev" aria-label="Procedimiento anterior"><span aria-hidden="true">←</span><span>Anterior</span></button>
+          <button class="nav-button primary" id="dialogNext" aria-label="Procedimiento siguiente"><span>Siguiente</span><span aria-hidden="true">→</span></button>
+        </nav>
+      </footer>
+    </section>
+  </div>
+
+  <div class="lightbox-backdrop" id="lightboxBackdrop" hidden>
+    <section class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" tabindex="-1">
+      <header>
+        <div><p>Captura oficial</p><h2 id="lightboxTitle"></h2></div>
+        <div class="lightbox-actions">
+          <button class="zoom-control" id="zoomButton" type="button" aria-pressed="false" aria-label="Ampliar imagen" title="Ampliar imagen">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="10.5" cy="10.5" r="6.5"></circle>
+              <path d="m15.4 15.4 4.1 4.1"></path>
+              <path d="M7.5 10.5h6"></path>
+              <path class="zoom-plus-vertical" d="M10.5 7.5v6"></path>
+            </svg>
+          </button>
+          <button class="icon-button" id="lightboxClose" aria-label="Cerrar imagen" title="Cerrar">×</button>
+        </div>
+      </header>
+      <div class="lightbox-canvas" id="lightboxCanvas"><img id="lightboxImage" alt=""></div>
+    </section>
+  </div>
+
+  <script src="editorial.js"></script>
+  <script src="refinement.js"></script>
+  <script src="training-content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
